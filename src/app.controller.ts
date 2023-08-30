@@ -1,13 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
 import { EntityManager } from 'typeorm';
 import { InjectEntityManager } from '@nestjs/typeorm';
+import { AppService } from './app.service';
 import { User } from './user/entities/user.entity';
 import { Article } from './article/entities/article.entity';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   @Get()
   getHello(): string {
